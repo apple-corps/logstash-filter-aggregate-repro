@@ -1,0 +1,10 @@
+---
+
+- id: removeme
+- id: mockme
+  mock: |
+    mutate {
+      replace => {
+        "[message]" => "mocked"
+      }
+    }

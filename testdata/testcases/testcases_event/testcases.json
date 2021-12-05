@@ -1,0 +1,45 @@
+{
+  "ignore": [
+    "@timestamp"
+  ],
+  "input_plugin": "stdin",
+  "fields": {
+    "global_field": "global",
+    "overwritten_field": "global"
+  },
+  "testcases": [
+    {
+      "fields": {
+        "string": "string value",
+        "number": 123,
+        "bool": true,
+        "overwritten_field": "event",
+        "parent": {
+          "key": "parent_key_value",
+          "child": {
+            "key": "parent_child_key_value"
+          }
+        },
+        "[logstash_parent][key]": "logstash_parent_key_value"
+      },
+      "expected": [
+        {
+          "string": "string value",
+          "number": 123,
+          "bool": true,
+          "global_field": "global",
+          "overwritten_field": "event",
+          "parent": {
+            "key": "parent_key_value",
+            "child": {
+              "key": "parent_child_key_value"
+            }
+          },
+          "logstash_parent": {
+            "key": "logstash_parent_key_value"
+          }
+        }
+      ]
+    }
+  ]
+}

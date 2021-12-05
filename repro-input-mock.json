@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "host": "d3209814fd"
+  },
+  "ignore": ["@timestamp","@version"],
+  "input_plugin": "input",
+  "testcases": [
+    {
+      "input": [
+        "Dec  2 22:56:46 | VALIS | NetworkManager[724]: <info>  [1638514606.5479] device (docker0): carrier: link connected"
+      ],
+      "expected": [
+        {
+          "message": "Dec  2 22:56:46 | VALIS | NetworkManager[724]: <info>  [1638514606.5479] device (docker0): carrier: link connected",
+          "logTimestamp": "Dec  2 22:56:46 ",
+          "level": "info",
+          "unix": "1638514606.5479",
+          "log": "device (docker0): carrier: link connected",
+          "hostname": " VALIS ",
+          "Service": "NetworkManager",
+          "id": "724",
+          "host": "d3209814fd"
+        }
+      ]
+    }
+  ]
+}

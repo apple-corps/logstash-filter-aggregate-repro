@@ -1,6 +1,7 @@
 FROM docker.elastic.co/logstash/logstash:7.15.2
 RUN cd /opt/logstash && bin/logstash-plugin install logstash-filter-aggregate
 RUN cd /opt/logstash && curl -LJO https://github.com/magnusbaeck/logstash-filter-verifier/releases/download/v2.0.0-beta.2/logstash-filter-verifier_v2.0.0-beta.2_linux_amd64.tar.gz && tar xvf logstash-filter-verifier_v2.0.0-beta.2_linux_amd64.tar.gz
+CMD [ "sleep", "infinity" ]
 
 
 ## Note: You can use any Debian/Ubuntu based image you want. 

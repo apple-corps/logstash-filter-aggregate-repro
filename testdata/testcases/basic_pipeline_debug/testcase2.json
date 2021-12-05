@@ -1,0 +1,34 @@
+{
+  "fields": {
+    "first": "1",
+    "second": "2"
+  },
+  "ignore": [
+    "@timestamp"
+  ],
+  "input_plugin": "stdin-with-dash",
+  "export_metadata": true,
+  "testcases": [
+    {
+      "input": [
+        ""
+      ],
+      "expected": [
+        {
+          "@metadata": {
+            "hidden_field": "hidden value"
+          },
+          "__lfv_id": "0",
+          "__lfv_out_passed": "stdout",
+          "first": "1",
+          "message": "",
+          "second": "2",
+          "tags": [
+            "main2_passed",
+            "sut_passed"
+          ]
+        }
+      ]
+    }
+  ]
+}

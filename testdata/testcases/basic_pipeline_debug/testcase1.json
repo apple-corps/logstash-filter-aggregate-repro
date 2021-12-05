@@ -1,0 +1,39 @@
+{
+  "fields": {
+    "type": "syslog"
+  },
+  "ignore": [
+    "@timestamp"
+  ],
+  "input_plugin": "stdin-with-dash",
+  "testcases": [
+    {
+      "input": [
+        "test case message",
+        "test case message 2"
+      ],
+      "expected": [
+        {
+          "__lfv_id": "0",
+          "__lfv_out_passed": "stdout",
+          "message": "test case message",
+          "tags": [
+            "main2_passed",
+            "sut_passed"
+          ],
+          "type": "syslog"
+        },
+        {
+          "__lfv_id": "1",
+          "__lfv_out_passed": "stdout",
+          "message": "test case message 2",
+          "tags": [
+            "main2_passed",
+            "sut_passed"
+          ],
+          "type": "syslog"
+        }
+      ]
+    }
+  ]
+}
